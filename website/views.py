@@ -55,10 +55,10 @@ def contribute(request):
             landing_instance.save()
             show_invite = False
 
-            send_email("MY SITE: Contact Us signup", "email=" + request.POST["email"])
+            send_email("MY SITE: Contact Us Signup", "email=" + request.POST["email"])
 
         else:
-            return HttpResponse("error")
+            return HttpResponse("Error")
 
     myform = ContributeForm()
     return render_to_response('contribute.html', {
